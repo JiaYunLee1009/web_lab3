@@ -1,0 +1,17 @@
+{
+  "name": "untitled1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext .js,.ts,.tsx --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "deploy": "npm run build && gh-page -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0",
+    "typescript": "^5.6.3"
+  },
+  "private": true
+}
