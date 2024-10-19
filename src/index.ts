@@ -1,4 +1,4 @@
-// app.ts
+// tsc --watch
 interface PersonalInfo {
     name: string;
     title: string;

@@ -1,3 +1,17 @@
+// {
+//   "compilerOptions": {
+//     "target": "es2016",
+//     "module": "commonjs",
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "strict": true,
+//     "skipLibCheck": true,
+//     "rootDir":"./",
+//     "outDir": "./dist"
+//   },
+//   "include": ["src"]
+// }
+
 {
   "compilerOptions": {
     "target": "es2016",
@@ -6,7 +20,27 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "outDir": "./dist"
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./dist",
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
+
+/*
+簡單來說，瀏覽器只讀 JavaScript，而 TypeScript 是瀏覽器看不懂的
+而且 TypeScript 主要是藉由把 JavaScript 在瀏覽器執行的環境
+搬到瀏覽器外面，因此會需要一個在電腦中的執行環境，叫做 Node.js
+這個 Node.js 的版本已經很多了，針對歷史版本會有很多的套件背新增或棄用
+因此出現 Node Package Manager -> 簡稱 NPM
+
+TypeScript 的運作環境其中一個就是靠這 NPM
+
+然後，因為瀏覽器看不懂 TS，因此需要透過 Node.js 套件，把 TS 轉換成瀏覽器看得懂的 JS
+所以需要進行編譯，那這個 tsconfig 就是在做你執行 TS 的環境的設定
+"outDir" 就是編譯檔案輸出的地方，會讓瀏覽器來讀取這裡面的 JS 檔案，這樣網頁功能才會正常。
+*/

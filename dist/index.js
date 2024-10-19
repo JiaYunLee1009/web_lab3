@@ -1,4 +1,5 @@
-var personalInfo = {
+"use strict";
+const personalInfo = {
     name: "李佳芸",
     title: "輔仁大學醫學資訊系學生",
     about: "你好，我是佳芸，來自台灣，目前就讀於大學，主修醫學資訊。",
@@ -6,7 +7,7 @@ var personalInfo = {
     skills: [],
     certifications: []
 };
-var education = [
+const education = [
     {
         degree: "醫學資訊學士學位",
         institution: "輔仁大學",
@@ -21,25 +22,25 @@ var education = [
 document.getElementById("name").textContent = personalInfo.name;
 document.getElementById("title").textContent = personalInfo.title;
 document.getElementById("about").textContent = personalInfo.about;
-var contactList = document.getElementById("contact-list");
-personalInfo.contact.forEach(function (contact) {
-    var li = document.createElement("li");
+const contactList = document.getElementById("contact-list");
+personalInfo.contact.forEach(contact => {
+    const li = document.createElement("li");
     li.textContent = contact;
     contactList.appendChild(li);
 });
-var skillsList = document.getElementById("skills-list");
-personalInfo.skills.forEach(function (skill) {
-    var li = document.createElement("li");
+const skillsList = document.getElementById("skills-list");
+personalInfo.skills.forEach(skill => {
+    const li = document.createElement("li");
     li.textContent = skill;
     skillsList.appendChild(li);
 });
-var certificationsList = document.getElementById("certifications-list");
-personalInfo.certifications.forEach(function (certification) {
-    var li = document.createElement("li");
+const certificationsList = document.getElementById("certifications-list");
+personalInfo.certifications.forEach(certification => {
+    const li = document.createElement("li");
     li.textContent = certification;
     certificationsList.appendChild(li);
 });
-var experienceList = document.getElementById("experience-list");
+const experienceList = document.getElementById("experience-list");
 // experiences.forEach(exp => {
 //     const div = document.createElement("div");
 //     div.classList.add("experience-entry");
@@ -65,19 +66,19 @@ var experienceList = document.getElementById("experience-list");
 //     div.appendChild(ul);
 //     experienceList.appendChild(div);
 // });
-var educationList = document.getElementById("education-list");
-education.forEach(function (edu) {
-    var div = document.createElement("div");
+const educationList = document.getElementById("education-list");
+education.forEach(edu => {
+    const div = document.createElement("div");
     div.classList.add("education-entry");
-    var h3 = document.createElement("h3");
+    const h3 = document.createElement("h3");
     h3.textContent = edu.degree;
     div.appendChild(h3);
-    var p = document.createElement("p");
-    p.innerHTML = "<strong>".concat(edu.institution, "</strong>, ").concat(edu.location, ", ").concat(edu.duration);
+    const p = document.createElement("p");
+    p.innerHTML = `<strong>${edu.institution}</strong>, ${edu.location}, ${edu.duration}`;
     div.appendChild(p);
-    var ul = document.createElement("ul");
-    edu.details.forEach(function (detail) {
-        var li = document.createElement("li");
+    const ul = document.createElement("ul");
+    edu.details.forEach(detail => {
+        const li = document.createElement("li");
         li.textContent = detail;
         ul.appendChild(li);
     });

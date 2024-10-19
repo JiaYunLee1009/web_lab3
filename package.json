@@ -7,7 +7,7 @@
     "build": "tsc",
     "lint": "eslint --ext .js,.ts,.tsx --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "deploy": "npm run build && gh-page -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^6.2.0",
