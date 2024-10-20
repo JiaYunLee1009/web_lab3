@@ -41,31 +41,6 @@ personalInfo.certifications.forEach(certification => {
     certificationsList.appendChild(li);
 });
 const experienceList = document.getElementById("experience-list");
-// experiences.forEach(exp => {
-//     const div = document.createElement("div");
-//     div.classList.add("experience-entry");
-//     const h3 = document.createElement("h3");
-//     h3.innerHTML = `<i class="fas fa-motorcycle"></i> ${exp.position}`;
-//     div.appendChild(h3);
-//     const p = document.createElement("p");
-//     p.innerHTML = `<strong>${exp.location}</strong>, ${exp.duration}`;
-//     div.appendChild(p);
-//     const ul = document.createElement("ul");
-//     exp.achievements.forEach(achievement => {
-//         const li = document.createElement("li");
-//         li.textContent = achievement;
-//         ul.appendChild(li);
-//     });
-//     if (exp.subAchievements) {
-//         exp.subAchievements.forEach(subAchievement => {
-//             const subLi = document.createElement("li");
-//             subLi.textContent = subAchievement;
-//             ul.appendChild(subLi);
-//         });
-//     }
-//     div.appendChild(ul);
-//     experienceList.appendChild(div);
-// });
 const educationList = document.getElementById("education-list");
 education.forEach(edu => {
     const div = document.createElement("div");
@@ -85,3 +60,4 @@ education.forEach(edu => {
     div.appendChild(ul);
     educationList.appendChild(div);
 });
+//# sourceMappingURL=index.js.map

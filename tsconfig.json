@@ -6,16 +6,21 @@
 //     "forceConsistentCasingInFileNames": true,
 //     "strict": true,
 //     "skipLibCheck": true,
-//     "rootDir":"./",
-//     "outDir": "./dist"
+//     "baseUrl": ".",
+//     "rootDir": "./src",
+//     "outDir": "./dist",
 //   },
-//   "include": ["src"]
+//   "include": ["src"],
+//   "exclude": [
+//     "node_modules",
+//     "dist"
+//   ]
 // }
 
 {
   "compilerOptions": {
     "target": "es2016",
-    "module": "commonjs",
+    "module": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -23,11 +28,14 @@
     "baseUrl": ".",
     "rootDir": "./src",
     "outDir": "./dist",
+    "removeComments": true,
+    "sourceMap": true
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    ".git"
   ]
 }
 
